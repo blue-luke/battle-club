@@ -7,11 +7,8 @@ get '/' do
   erb :index
 end
 
-post '/form' do
-  params.to_s
-end
-
-get '/results' do
-  erb :results
+get '/form' do
+  details.append(params[:todo])
+  details.join("\n")
 end
 
