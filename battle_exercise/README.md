@@ -6,6 +6,8 @@ There is the question of how to develop functionality: horizontally, doing the l
 
 I think it is better to do it horizontally, as this will reduce the scope for errors and reduce the need for refactoring... hopefully. Though, I will only do the basic user stories before doing the interface, returning to advanced user stories later.
 
+However, I am following the tutorial at the moment, so this question is moot.
+
 I should use a vertical approach an another web project to allow me to compare the two approaches.
 
 ## Basic user stories
