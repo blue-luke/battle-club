@@ -11,11 +11,11 @@ end
 
 get '/random-cat' do
   @name = ["Amigos", "Mistys", "Almonds"].sample
-  erb :cat
+  erb :random_cat
 end
 
 get '/named-cat' do
   p params
   @name = params[:name]
-  erb :cat
+  erb :named_cat
 end
