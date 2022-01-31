@@ -1,5 +1,13 @@
 # Battle - a web project with testing frameworks
 
+## Approach
+
+There is the question of how to develop functionality: horizontally, doing the logic first then the web interface second; or vertically, implementing one piece of functionality logically and in the interface before proceeding to the next piece of functionality.
+
+I think it is better to do it horizontally, as this will reduce the scope for errors and reduce the need for refactoring... hopefully. Though, I will only do the basic user stories before doing the interface, returning to advanced user stories later.
+
+I should use a vertical approach an another web project to allow me to compare the two approaches.
+
 ## Basic user stories
 
 As two Players,
