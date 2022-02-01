@@ -9,7 +9,7 @@ Player 2: <%= @game.player2.name %> has <%= @game.player2.hp %> HP
 
 It is <%= @game.next_player.name %>'s turn
 <br> </br>
-<% if @game.next_player == @game.player2%>
+<% if @game.next_player == @game.player2 %>
 
   </form>
   <form action="/deduct_player1_hp" method="post">
