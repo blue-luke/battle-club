@@ -14,6 +14,7 @@ class Battle < Sinatra::Base
   end
 
   post '/names' do
+    $game = Game.new
     $player1 = Player.new(params[:player1])
     $player2 = Player.new(params[:player2])
 
@@ -21,12 +22,12 @@ class Battle < Sinatra::Base
   end
 
   post '/deduct_player2_hp' do
-    $player1.attack($player2)
+    $game.attack($player2)
     redirect '/names'
   end
 
   post '/deduct_player1_hp' do
-    $player2.attack($player1)
+    $game.attack($player1)
     redirect '/names'
   end
 
