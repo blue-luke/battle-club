@@ -15,16 +15,16 @@ class Battle < Sinatra::Base
   end
 
   post '/names' do
-    p params
-    p session
     session[:player1] = params[:player1]
     session[:player2] = params[:player2]
-    p session
-    @player1 = params[:player1]
-    @player2 = params[:player2]
-    erb :play
+    redirect '/names'
   end
 
+  get '/names' do
+    @player1 = session[:player1]
+    @player2 = session[:player2]
+    erb :play
+  end
   # # Start the server if this file is executed directly (do not change the line below)
   run! if app_file == $0
 end
