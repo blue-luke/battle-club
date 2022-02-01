@@ -5,7 +5,7 @@ describe 'game' do
   let(:player2) { double :player }
 
   it 'attacks a player' do
-    g = Game.new
+    g = Game.new(player1, player2)
     expect(player2).to receive(:get_attacked)
     g.attack(player2)
   end
