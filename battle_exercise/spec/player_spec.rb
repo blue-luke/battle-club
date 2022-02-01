@@ -9,4 +9,9 @@ describe 'player' do
     p1 = Player.new("Jane")
     expect(p1.hp).to eq 100
   end
+  it 'deducts 10 hp whenever attacked' do
+    p1 = Player.new("Jane")
+    p1.get_attacked
+    expect(p1.hp).to eq 90
+  end
 end
