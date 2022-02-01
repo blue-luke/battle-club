@@ -27,6 +27,11 @@ class Battle < Sinatra::Base
     redirect '/names'
   end
 
+  post '/deduct_player1_hp' do
+    session[:player1_hp] -= 10
+    redirect '/names'
+  end
+
   get '/names' do
     @player1 = session[:player1]
     @player2 = session[:player2]
