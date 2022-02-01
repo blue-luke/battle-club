@@ -8,6 +8,6 @@ feature 'State next turn' do
     end
     click_button('Attack player 2')
 
-    expect(page).to have_content "Jane has won!"
+    expect(page).to have_content "Well done, Jane, you have won!"
   end
 end
