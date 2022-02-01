@@ -6,6 +6,8 @@ class Battle < Sinatra::Base
     register Sinatra::Reloader
   end
 
+  enable :sessions
+
   # our routes would go here
 
   get '/' do
@@ -14,6 +16,10 @@ class Battle < Sinatra::Base
 
   post '/names' do
     p params
+    p session
+    session[:player1] = params[:player1]
+    session[:player2] = params[:player2]
+    p session
     @player1 = params[:player1]
     @player2 = params[:player2]
     erb :play
