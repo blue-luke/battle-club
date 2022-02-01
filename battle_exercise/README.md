@@ -81,3 +81,13 @@ I want to have an attack that heals some of my Hit Points
 As a Player,
 So I can enjoy my game of Battle,
 I want a sexy user interface
+
+As a Player,
+So that I can play a game from any computer
+I want the app hosted externally
+
+## Custom user stories
+
+As a Player,
+So that I can play a game on the move
+I want to be able to play a game by text message
