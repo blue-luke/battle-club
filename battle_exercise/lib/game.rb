@@ -4,6 +4,7 @@ class Game
     @player1 = player1
     @player2 = player2
     @next_player = @player1
+    @loser = nil
   end
   def attack(player)
     player.get_attacked
@@ -17,6 +18,13 @@ class Game
       @next_player = @player2
     elsif @next_player == @player2
       @next_player = @player1
+    end
+  end
+  def loser?
+    if @player1.hp == 0
+      @loser = @player1
+    elsif @player2.hp == 0
+      @loser = @player2
     end
   end
 end

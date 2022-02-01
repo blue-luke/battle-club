@@ -18,4 +18,12 @@ describe 'game' do
 
     expect(g.players).to eq "Jane, John"
   end
+  it 'checks when a game is lost' do
+    player1_double = double("Player", :name => "Jane", :hp => 10)
+    player2_double = double("Player", :name => "John", :hp => 0)
+
+    g = Game.new(player1_double, player2_double)
+
+    expect(g.loser?).to eq player2_double
+  end
 end
