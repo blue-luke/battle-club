@@ -10,7 +10,7 @@ feature 'State next turn' do
 
     expect(page).to have_content "Well done, Jane, you have won!"
   end
-  scenario 'Link to starting new game is provided' do
+  scenario 'Redirected to index to start a new game' do
     sign_in_and_play
 
     9.times do
