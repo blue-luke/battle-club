@@ -5,6 +5,6 @@ feature 'Attacking a player' do
     click_button('Attack John')
 
     expect(page).to have_content 'Jane attacked John'
-    expect(page).to have_content 'John has 100 HP'
+    expect(page).to have_content 'John has 90 HP'
   end
 end
