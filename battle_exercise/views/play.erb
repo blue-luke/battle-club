@@ -4,6 +4,6 @@ Hello there, <%= @player1 %> and <%= @player2 %>, are you ready to play?
 <br> </br>
 <%= @player2 %> has <%= @player2_hp %> HP
 <br> </br>
-<form action="/names" method="post">
-<input type="submit" id='<%= @player2 %>'>
+<form action="/deduct_player2_hp" method="post">
+Attack player 2 <input type="submit" id='<%= @player2 %>'>
 </form>
