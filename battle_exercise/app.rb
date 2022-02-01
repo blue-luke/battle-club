@@ -7,8 +7,6 @@ class Battle < Sinatra::Base
     register Sinatra::Reloader
   end
 
-  # enable :sessions
-
   # our routes would go here
 
   get '/' do
@@ -24,21 +22,17 @@ class Battle < Sinatra::Base
 
   post '/deduct_player2_hp' do
     $player2.get_attacked
-    # session[:player2_hp] -= 10
     redirect '/names'
   end
 
   post '/deduct_player1_hp' do
     $player1.get_attacked
-    # session[:player1_hp] -= 10
     redirect '/names'
   end
 
   get '/names' do
     @player1 = $player1
     @player2 = $player2
-    # @player1_hp = session[:player1_hp]
-    # @player2_hp = session[:player2_hp]
     erb :play
   end
   # # Start the server if this file is executed directly (do not change the line below)
