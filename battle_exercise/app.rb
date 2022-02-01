@@ -21,12 +21,12 @@ class Battle < Sinatra::Base
   end
 
   post '/deduct_player2_hp' do
-    $player2.get_attacked
+    $player1.attack($player2)
     redirect '/names'
   end
 
   post '/deduct_player1_hp' do
-    $player1.get_attacked
+    $player2.attack($player1)
     redirect '/names'
   end
 
