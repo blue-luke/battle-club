@@ -14,4 +14,10 @@ describe 'player' do
     p1.get_attacked
     expect(p1.hp).to eq 90
   end
+  it 'attacks a player and deducts points' do
+    p1 = Player.new("Jane")
+    p2 = Player.new("John")
+    p1.attack(p2)
+    expect(p2.hp).to eq 90
+  end
 end

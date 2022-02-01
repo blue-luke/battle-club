@@ -7,4 +7,7 @@ class Player
   def get_attacked
     @hp -= 10
   end
+  def attack(player)
+    player.get_attacked
+  end
 end
