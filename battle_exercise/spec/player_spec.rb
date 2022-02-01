@@ -5,4 +5,8 @@ describe 'player' do
     p1 = Player.new("Jane")
     expect(p1.name).to eq "Jane"
   end
+  it 'starts a player with 100 hp' do
+    p1 = Player.new("Jane")
+    expect(p1.hp).to eq 100
+  end
 end
