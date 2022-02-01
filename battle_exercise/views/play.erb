@@ -1,8 +1,8 @@
 Hello there, <%= @player1.name %> and <%= @player2.name %>, are you ready to play?
 <br> </br>
-<%= @player1.name %> has <%= @player1_hp %> HP
+<%= @player1.name %> has <%= @player1.hp %> HP
 <br> </br>
-<%= @player2.name %> has <%= @player2_hp %> HP
+<%= @player2.name %> has <%= @player2.hp %> HP
 <br> </br>
 <form action="/deduct_player2_hp" method="post">
 Attack player 2 <input type="submit" id='Attack player 2'>
