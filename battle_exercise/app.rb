@@ -24,7 +24,11 @@ class Battle < Sinatra::Base
 
   post '/deduct_player2_hp' do
     $game.attack($game.player2)
-    redirect '/names'
+    if $game.winner
+      redirect '/winner'
+    else
+      redirect '/names'
+    end
   end
 
   post '/deduct_player1_hp' do
@@ -35,6 +39,11 @@ class Battle < Sinatra::Base
   get '/names' do
     @game = $game
     erb :play
+  end
+
+  get '/winner' do
+    @game = $game
+    erb :winner
   end
 
   # # Start the server if this file is executed directly (do not change the line below)

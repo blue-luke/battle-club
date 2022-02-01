@@ -1,5 +1,5 @@
 feature 'State next turn' do
-  xscenario 'A loser is announced' do
+  scenario 'A winner is announced' do
     sign_in_and_play
 
     9.times do
