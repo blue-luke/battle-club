@@ -22,4 +22,11 @@ describe 'player' do
     p1.attack(p2)
     expect(p2.hp).to eq 90
   end
+  it 'a player defends and loses no points next round' do
+    p1 = Player.new("Jane")
+    p2 = Player.new("John")
+    p1.defend
+    p2.attack(p1)
+    expect(p1.hp).to eq 100
+  end
 end
