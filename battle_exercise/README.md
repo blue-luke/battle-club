@@ -54,6 +54,8 @@ As a Player,
 So I can play a suspenseful game of Battle,
 I want all Attacks to deal a random amount of damage
 
+--- Above this line means completed ---
+
 As a lonely Player,
 So I can keep my Battle skills up to scratch
 I want to play a Computerised opponent
