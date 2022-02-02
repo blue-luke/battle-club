@@ -54,6 +54,10 @@ As a Player,
 So I can play a suspenseful game of Battle,
 I want all Attacks to deal a random amount of damage
 
+As a Player,
+So I can play a defensively if I am close to losing
+I want to be able to defend myself for one turn
+
 --- Above this line means completed ---
 
 As a Player,
