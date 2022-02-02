@@ -3,10 +3,10 @@ feature 'State next turn' do
     sign_in_and_play
 
     9.times do
-      click_button('Attack player 2')
-      click_button('Attack player 1')
+      click_button('Attack!')
+      click_button('Attack!')
     end
-    click_button('Attack player 2')
+    click_button('Attack!')
 
     expect(page).to have_content "Well done, Jane, you have won!"
   end
@@ -14,10 +14,10 @@ feature 'State next turn' do
     sign_in_and_play
 
     9.times do
-      click_button('Attack player 2')
-      click_button('Attack player 1')
+      click_button('Attack!')
+      click_button('Attack!')
     end
-    click_button('Attack player 2')
+    click_button('Attack!')
     click_button('New game')
 
     expect(page).to have_content "Would you like to play a game?"

@@ -27,9 +27,9 @@ class Game
   end
   
   def winner?
-    if @player1.hp == 0
+    if @player1.hp <= 0
       @winner = @player2
-    elsif @player2.hp == 0
+    elsif @player2.hp <= 0
       @winner = @player1
     end
   end
