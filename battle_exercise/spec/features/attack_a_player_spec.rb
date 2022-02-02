@@ -1,5 +1,7 @@
 feature 'Attacking a player' do
   scenario 'Geting confirmation' do
+    allow_any_instance_of(Player).to receive(:calculate_damage).and_return(10)
+    
     sign_in_and_play
 
     click_button('Attack player 2')

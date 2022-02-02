@@ -5,7 +5,10 @@ class Player
     @hp = 100
   end
   def get_attacked
-    @hp -= 10
+    @hp -= calculate_damage
+  end
+  def calculate_damage
+    rand(100)
   end
   def attack(player)
     player.get_attacked
