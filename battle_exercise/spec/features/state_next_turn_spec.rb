@@ -6,7 +6,7 @@ feature 'State next turn' do
   end
   scenario 'Player 2 goes second' do
     sign_in_and_play
-    click_button('Attack player 2')
+    click_button('Attack!')
 
     expect(page).to have_content "It is John's turn"
   end

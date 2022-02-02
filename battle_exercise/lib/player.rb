@@ -8,7 +8,7 @@ class Player
     @hp -= calculate_damage
   end
   def calculate_damage
-    rand(100)
+    rand(10)
   end
   def attack(player)
     player.get_attacked

@@ -33,7 +33,11 @@ class Battle < Sinatra::Base
 
   post '/deduct_player1_hp' do
     $game.attack($game.player1)
-    redirect '/names'
+    if $game.winner
+      redirect '/winner'
+    else
+      redirect '/names'
+    end
   end
 
   get '/names' do

@@ -56,10 +56,6 @@ I want all Attacks to deal a random amount of damage
 
 --- Above this line means completed ---
 
-As a lonely Player,
-So I can keep my Battle skills up to scratch
-I want to play a Computerised opponent
-
 As a Player,
 So I can enjoy a game of Battle with more variety,
 I want to choose from a range of attacks I could make
@@ -67,6 +63,10 @@ I want to choose from a range of attacks I could make
 As a Player,
 So I can better enjoy a game of Battle,
 I want some of my attacks to Paralyse an opponent (chance of losing their next attack)
+
+As a lonely Player,
+So I can keep my Battle skills up to scratch
+I want to play a Computerised opponent
 
 As a Player,
 So I can better enjoy a game of Battle,
