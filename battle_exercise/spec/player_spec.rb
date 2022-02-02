@@ -11,8 +11,9 @@ describe 'player' do
   end
   it 'deducts some hp whenever attacked' do
     p1 = Player.new("Jane")
+    p2 = Player.new("John")
     allow(p1).to receive(:calculate_damage).and_return(10)
-    p1.get_attacked
+    p2.attack(p1)
     expect(p1.hp).to eq 90
   end
   it 'attacks a player and deducts points' do
@@ -58,5 +59,20 @@ describe 'player' do
     p1.go_to_sleep
     p2.attack(p1)
     expect(p1.asleep).to eq false
+  end
+  it 'cannot attack while alseep but then they wake up and can attack again' do
+    p1 = Player.new("Jane")
+    p2 = Player.new("John")
+
+    allow(p2).to receive(:calculate_sleep_odds).and_return(10)
+    p2.go_to_sleep
+
+    allow(p1).to receive(:calculate_damage).and_return(10)
+    p2.attack(p1)
+
+    expect(p1.hp).to eq 100
+
+    p2.attack(p1)
+    expect(p1.hp).to eq 90
   end
 end

@@ -9,7 +9,11 @@ class Game
   end
 
   def attack(player)
-    player.get_attacked
+    if player == @player1
+      @player2.attack(@player1)
+    elsif player == @player2
+      @player1.attack(@player2)
+    end
     switch_player
     winner?
   end

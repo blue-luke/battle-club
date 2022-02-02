@@ -1,17 +1,14 @@
 require 'game'
 
 describe 'game' do
-  # let(:player1) { double :player }
-  # let(:player2) { double :player }
-
   it 'attacks a player' do
-    player1_double = double("Player", :name => "Jane", :hp => 100, :get_attacked => true)
-    player2_double = double("Player", :name => "John", :hp => 100, :get_attacked => true)
+    player1_double = double("Player", :name => "Jane", :hp => 100, :attack => true)
+    player2_double = double("Player", :name => "John", :hp => 100)
 
     g = Game.new(player1_double, player2_double)
     g.attack(player2_double)
 
-    expect(player2_double).to have_received(:get_attacked)
+    expect(player1_double).to have_received(:attack)
   end
 
   it 'defends a player' do
