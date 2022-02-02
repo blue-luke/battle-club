@@ -14,6 +14,11 @@ class Game
     winner?
   end
 
+  def defend(player)
+    player.defend
+    switch_player
+  end
+
   def players
     "#{@player1.name}, #{@player2.name}"
   end

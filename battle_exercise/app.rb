@@ -40,6 +40,15 @@ class Battle < Sinatra::Base
     end
   end
 
+  post '/defend_player1_' do
+    $game.attack($game.player1)
+    if $game.winner
+      redirect '/winner'
+    else
+      redirect '/names'
+    end
+  end
+
   get '/names' do
     @game = $game
     erb :play
