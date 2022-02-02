@@ -49,7 +49,7 @@ GEM
       nokogiri (~> 1.8)
 
 PLATFORMS
-  arm64-darwin-20
+
   ruby
   x86_64-linux
 
