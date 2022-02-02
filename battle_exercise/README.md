@@ -97,7 +97,6 @@ As a Player,
 So I can extend my joyous experience of Battle,
 I want to have an attack that heals some of my Hit Points
 
-
 As a Player,
 So I can better enjoy a game of Battle,
 I want some of my attacks to Paralyse an opponent (chance of losing their next attack)
