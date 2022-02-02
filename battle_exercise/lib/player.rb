@@ -10,6 +10,7 @@ class Player
     @hp -= calculate_damage
   end
   def calculate_damage
+    @asleep = false
     unless @defending
       rand(10)
     else
