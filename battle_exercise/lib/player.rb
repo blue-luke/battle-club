@@ -1,5 +1,5 @@
 class Player
-  attr_reader :name, :hp
+  attr_reader :name, :hp, :defending
   def initialize(name)
     @name = name
     @hp = 100
@@ -12,7 +12,7 @@ class Player
     unless @defending
       rand(10)
     else
-      # @defending = false
+      @defending = false
       0
     end
   end

@@ -29,4 +29,11 @@ describe 'player' do
     p2.attack(p1)
     expect(p1.hp).to eq 100
   end
+  it 'a player defends for one round only' do
+    p1 = Player.new("Jane")
+    p2 = Player.new("John")
+    p1.defend
+    p2.attack(p1)
+    expect(p1.defending).to eq false
+  end
 end
