@@ -14,6 +14,11 @@ class Game
     winner?
   end
 
+  def put_to_sleep(player)
+    player.go_to_sleep
+    switch_player
+  end
+
   def defend(player)
     player.defend
     switch_player

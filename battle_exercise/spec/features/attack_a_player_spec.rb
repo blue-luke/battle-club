@@ -35,9 +35,30 @@ feature 'Attacking a player' do
     sign_in_and_play
 
     click_button('Put to sleep!')
-    click_button('OK')
-    click_button('Attack!')
 
-    expect(page).to have_content 'John has 90 HP'
+    expect(page).to have_content 'is asleep. Your actions will have no effect'
+  end
+  scenario 'Players cannot attack when asleep' do
+    allow_any_instance_of(Player).to receive(:calculate_sleep_odds).and_return(10)
+
+    sign_in_and_play
+
+    click_button('Put to sleep!')
+    expect($game.player2.asleep).to eq true
+    
+    expect(page).to have_content 'is asleep. Your actions will have no effect'
+    click_button('Attack!')
+    
+    expect(page).to have_content 'Jane has 100 HP'
+  end
+  scenario 'Players sleep for one round' do
+    allow_any_instance_of(Player).to receive(:calculate_damage).and_return(10)
+    allow_any_instance_of(Player).to receive(:calculate_sleep_odds).and_return(10)
+
+    sign_in_and_play
+
+    click_button('Put to sleep!')
+    
+    expect(page).to have_content 'is asleep. Your actions will have no effect'
   end
 end

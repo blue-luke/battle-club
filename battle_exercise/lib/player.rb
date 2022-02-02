@@ -19,7 +19,10 @@ class Player
     end
   end
   def attack(player)
-    player.get_attacked
+    unless @asleep
+      player.get_attacked
+    end
+    @asleep = false
   end
   def defend
     @defending = true
@@ -31,7 +34,7 @@ class Player
     if calculate_sleep_odds > 5
       @asleep = true
     else
-      @asleep
+      @asleep = false
     end
   end
 end

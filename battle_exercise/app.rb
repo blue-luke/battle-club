@@ -31,6 +31,11 @@ class Battle < Sinatra::Base
     end
   end
 
+  post '/sleep_player2' do
+    $game.put_to_sleep($game.player2)
+    redirect '/names'
+  end
+
   post '/deduct_player1_hp' do
     $game.attack($game.player1)
     if $game.winner
@@ -38,6 +43,11 @@ class Battle < Sinatra::Base
     else
       redirect '/names'
     end
+  end
+
+  post '/sleep_player1' do
+    $game.put_to_sleep($game.player1)
+    redirect '/names'
   end
 
   post '/defend_player1' do
