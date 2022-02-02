@@ -9,8 +9,6 @@ feature 'Attacking a player' do
     expect(page).to have_content 'John has 90 HP'
   end
   scenario 'Successfully defend' do
-    allow_any_instance_of(Player).to receive(:calculate_damage).and_return(10)
-    
     sign_in_and_play
 
     click_button('Defend!')

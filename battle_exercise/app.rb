@@ -40,13 +40,9 @@ class Battle < Sinatra::Base
     end
   end
 
-  post '/defend_player1_' do
-    $game.attack($game.player1)
-    if $game.winner
-      redirect '/winner'
-    else
-      redirect '/names'
-    end
+  post '/defend_player1' do
+    $game.defend($game.player1)
+    redirect '/names'
   end
 
   get '/names' do

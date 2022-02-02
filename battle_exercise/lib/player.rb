@@ -11,9 +11,8 @@ class Player
   def calculate_damage
     unless @defending
       rand(10)
-    # else
-    #   @defending = false
     else
+      # @defending = false
       0
     end
   end

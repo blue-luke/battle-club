@@ -21,5 +21,8 @@ It is <%= @game.next_player.name %>'s turn
   <form action="/deduct_player2_hp" method="post">
   Attack <%= @game.player2.name %> <input type="submit" id='Attack!'>
   </form>
+  <form action="/defend_player1" method="post">
+  Attack <%= @game.player1.name %> <input type="submit" id='Defend!'>
+  </form>
 
 <% end %>
