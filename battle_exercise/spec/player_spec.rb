@@ -35,5 +35,21 @@ describe 'player' do
     p1.defend
     p2.attack(p1)
     expect(p1.defending).to eq false
+  end  
+  it 'sleeps and is defenceless' do
+    p1 = Player.new("Jane")
+    p2 = Player.new("John")
+    allow(p1).to receive(:calculate_damage).and_return(10)
+    p1.go_to_sleep
+    p2.attack(p1)
+    expect(p1.hp).to eq 90
+  end
+  it 'has odds of falling asleep' do
+    p1 = Player.new("Jane")
+    p2 = Player.new("John")
+    allow(p1).to receive(:calculate_damage).and_return(10)
+    allow(p1).to receive(:calculate_sleep_odds).and_return(1)
+    p1.go_to_sleep
+    expect(p1.asleep).to eq false
   end
 end

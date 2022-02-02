@@ -28,4 +28,16 @@ feature 'Attacking a player' do
 
     expect(page).to have_content 'John has 90 HP'
   end
+  scenario 'Players can be put to sleep' do
+    allow_any_instance_of(Player).to receive(:calculate_damage).and_return(10)
+    allow_any_instance_of(Player).to receive(:calculate_sleep_odds).and_return(10)
+
+    sign_in_and_play
+
+    click_button('Put to sleep!')
+    click_button('OK')
+    click_button('Attack!')
+
+    expect(page).to have_content 'John has 90 HP'
+  end
 end
