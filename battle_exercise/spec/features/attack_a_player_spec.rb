@@ -23,6 +23,7 @@ feature 'Attacking a player' do
 
     click_button('Attack!')
     click_button('Defend!')
+    allow_any_instance_of(Player).to receive(:calculate_damage).and_call_original
     click_button('Attack!')
 
     expect(page).to have_content 'John has 90 HP'
