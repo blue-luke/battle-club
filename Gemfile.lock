@@ -12,6 +12,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   sinatra (~> 1.4, >= 1.4.7)
